@@ -1,11 +1,9 @@
-package test.mindorks.swipe.tinderswipe;
+package test.mindorks.swipe.flashcards;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by janisharali on 29/08/16.
- */
+
 public class Profile {
 
     @SerializedName("name")

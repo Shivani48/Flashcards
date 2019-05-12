@@ -1,4 +1,4 @@
-package test.mindorks.swipe.tinderswipe;
+package test.mindorks.swipe.flashcards;
 
 import android.content.Context;
 import android.graphics.Point;
@@ -9,6 +9,8 @@ import android.view.View;
 
 import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
+
+import test.mindorks.swipe.tinderswipe.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,33 +39,16 @@ public class MainActivity extends AppCompatActivity {
                         .setPaddingTop(20)
                         .setRelativeScale(0.01f)
                         .setSwipeMaxChangeAngle(2f)
-                .setSwipeInMsgLayoutId(R.layout.tinder_swipe_in_msg_view)
-                .setSwipeOutMsgLayoutId(R.layout.tinder_swipe_out_msg_view));
+                .setSwipeInMsgLayoutId(R.layout.card_swipe_in_msg_view)
+                .setSwipeOutMsgLayoutId(R.layout.card_swipe_out_msg_view));
 
 
         for(Profile profile : Utils.loadProfiles(this.getApplicationContext())){
-            mSwipeView.addView(new TinderCard(mContext, profile, mSwipeView));
+            mSwipeView.addView(new Flashcards(mContext, profile, mSwipeView));
         }
 
-        findViewById(R.id.rejectBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mSwipeView.doSwipe(false);
-            }
-        });
 
-        findViewById(R.id.acceptBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mSwipeView.doSwipe(true);
-            }
-        });
 
-        findViewById(R.id.undoBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mSwipeView.undoLastSwipe();
-            }
-        });
+
     }
 }

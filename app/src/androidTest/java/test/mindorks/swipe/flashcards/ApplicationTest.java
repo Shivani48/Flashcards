@@ -1,4 +1,4 @@
-package test.mindorks.swipe.tinderswipe;
+package test.mindorks.swipe.flashcards;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
