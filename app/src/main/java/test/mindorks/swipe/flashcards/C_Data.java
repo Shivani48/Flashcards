@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class Profile {
+public class C_Data {
 
     @SerializedName("name")
     @Expose
@@ -18,7 +18,7 @@ public class Profile {
 
     @SerializedName("location")
     @Expose
-    private String location;
+    private String des;
 
     public String getName() {
         return name;
@@ -37,10 +37,10 @@ public class Profile {
     }
 
     public String getLocation() {
-        return location;
+        return des;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setLocation(String des) {
+        this.des = des;
     }
 }

@@ -31,8 +31,6 @@ public class Flashcards {
     @View(R.id.profileImageView)
     private ImageView profileImageView;
 
-    @View(R.id.nameAgeTxt)
-    private TextView nameAgeTxt;
 
     @View(R.id.locationNameTxt)
     private TextView locationNameTxt;
@@ -40,11 +38,11 @@ public class Flashcards {
     @SwipeView
     private android.view.View cardView;
 
-    private Profile mProfile;
+    private C_Data mProfile;
     private Context mContext;
     private SwipePlaceHolderView mSwipeView;
 
-    public Flashcards(Context context, Profile profile, SwipePlaceHolderView swipeView) {
+    public Flashcards(Context context, C_Data profile, SwipePlaceHolderView swipeView) {
         mContext = context;
         mProfile = profile;
         mSwipeView = swipeView;

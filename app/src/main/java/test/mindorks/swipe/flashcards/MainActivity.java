@@ -5,7 +5,6 @@ import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.View;
 
 import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 .setSwipeOutMsgLayoutId(R.layout.card_swipe_out_msg_view));
 
 
-        for(Profile profile : Utils.loadProfiles(this.getApplicationContext())){
+        for(C_Data profile : Utils.loadProfiles(this.getApplicationContext())){
             mSwipeView.addView(new Flashcards(mContext, profile, mSwipeView));
         }
 
